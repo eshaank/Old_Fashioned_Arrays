@@ -1,5 +1,9 @@
 package _01_array_manipulation;
 
+import java.sql.Array;
+
+import _02_diy_array_list.ArrayList;
+
 public class Inserting {
 
 	public static int[] insertAt(int[] testArray, int i, int j) {
@@ -9,8 +13,13 @@ public class Inserting {
 	}
 
 	public static String[] insertAlphabetically(String[] orderedArray, String string) {
-		// TODO Auto-generated method stub
-		return null;
+	String[] Array = orderedArray;
+	for (int i = 0; i < Array.length; i++) {
+		System.out.println(Array[i]);
+	}
+	
+	
+	return orderedArray;
 	}
 
 }

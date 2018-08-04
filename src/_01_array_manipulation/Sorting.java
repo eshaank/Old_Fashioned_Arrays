@@ -15,11 +15,13 @@ public class Sorting {
 					testArray[i + 1] = temp;
 				} 
 
-				System.out.println(testArray[i]);
+				
 			}
 		} while (swap);
 
-	
+//	for (int i = 0; i < testArray.length; i++) {
+//		System.out.println(testArray[i]);
+//	}
 		
 	}
 }

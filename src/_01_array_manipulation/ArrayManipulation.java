@@ -40,58 +40,58 @@ public class ArrayManipulation {
 //		}
 //	}
 
-	@Test
-	public void testInsertIntoArray() {
-		int[] testArray = { 3, 6, 8, 3, 3, 2, 98 };
-		testArray = Inserting.insertAt(testArray, 5, 3);
-		assertEquals(3, testArray[0]);
-		assertEquals(3, testArray[4]);
-		assertEquals(3, testArray[5]);
-	}
+//	@Test
+//	public void testInsertIntoArray() {
+//		int[] testArray = { 3, 6, 8, 3, 3, 2, 98 };
+//		testArray = Inserting.insertAt(testArray, 5, 3);
+//		assertEquals(3, testArray[0]);
+//		assertEquals(3, testArray[4]);
+//		assertEquals(3, testArray[5]);
+//	}
 
-	@Test
-	public void testInsertIntoRandomArray() {
-		int[] testArray = new int[100];
-		for (int i = 0; i < 100; ++ i) {
-			testArray[i] = rng.nextInt();
-		}
-		int[] inputArrayCopy = Arrays.copyOf(testArray, 100);
-		
-		int[] actualOutputArray = Inserting.insertAt(testArray, 73, 42);
-		assertEquals(42, actualOutputArray[73]);
-		for (int i = 0; i < 73; ++ i) {
-			assertEquals(inputArrayCopy[i], actualOutputArray[i]);
-		}
+//	@Test
+//	public void testInsertIntoRandomArray() {
+//		int[] testArray = new int[100];
+//		for (int i = 0; i < 100; ++ i) {
+//			testArray[i] = rng.nextInt();
+//		}
+//		int[] inputArrayCopy = Arrays.copyOf(testArray, 100);
+//		
+//		int[] actualOutputArray = Inserting.insertAt(testArray, 73, 42);
+//		assertEquals(42, actualOutputArray[73]);
+//		for (int i = 0; i < 73; ++ i) {
+//			assertEquals(inputArrayCopy[i], actualOutputArray[i]);
+//		}
 //		for (int i = 74; i < 101; ++ i) {
 //			assertEquals(inputArrayCopy[i-1], actualOutputArray[i]);
 //		}
-	}
-
-//	@Test
-//	public void testInsertInOrderFirst() throws Exception {
-//		String[] orderedArray = { "concerned", "affected", "fascinated",
-//				"intrigued", "absorbed", "inquisitive", "nosy", "snoopy",
-//				"engrossed", "curious" };
-//		Sorting.sort(orderedArray);
-//		String[] outputArray = Inserting.insertAlphabetically(orderedArray, "aardvark");
-//		
-//		assertArrayEquals(
-//			new String[] {
-//				"aardvark",
-//				"absorbed",
-//				"affected",
-//				"concerned",
-//				"curious",
-//				"engrossed",
-//				"fascinated",
-//				"inquisitive",
-//				"intrigued",
-//				"nosy",
-//				"snoopy"
-//			},
-//			outputArray
-//		);
 //	}
+
+	@Test
+	public void testInsertInOrderFirst() throws Exception {
+		String[] orderedArray = { "concerned", "affected", "fascinated",
+				"intrigued", "absorbed", "inquisitive", "nosy", "snoopy",
+				"engrossed", "curious" };
+		Sorting.sort(orderedArray);
+		String[] outputArray = Inserting.insertAlphabetically(orderedArray, "aardvark");
+		
+		assertArrayEquals(
+			new String[] {
+				"aardvark",
+				"absorbed",
+				"affected",
+				"concerned",
+				"curious",
+				"engrossed",
+				"fascinated",
+				"inquisitive",
+				"intrigued",
+				"nosy",
+				"snoopy"
+			},
+			outputArray
+		);
+	}
 
 //	@Test
 //	public void testInsertInOrderMiddle() throws Exception {
