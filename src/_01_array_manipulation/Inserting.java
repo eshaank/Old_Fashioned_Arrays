@@ -12,10 +12,9 @@ public class Inserting {
 
 	public static String[] insertAlphabetically(String[] orderedArray, String string) {
 	String[] insert = orderedArray;
-	
 	boolean swap = false;
 	do {
-	for (int i = 0; i < insert.length; i++) {
+	for (int i = 0; i < insert.length-1; i++) {
 		if (insert[i].compareTo(string ) > 0) {
 			swap = true;
 			String temp = insert[i];

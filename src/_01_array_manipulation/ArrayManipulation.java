@@ -77,7 +77,7 @@ public class ArrayManipulation {
 		
 		assertArrayEquals(
 			new String[] {
-				
+				"aardvark",
 				"absorbed",
 				"affected",
 				"concerned",
