@@ -1,8 +1,6 @@
 package _01_array_manipulation;
 
-import java.sql.Array;
-
-import _02_diy_array_list.ArrayList;
+import java.util.ArrayList;
 
 public class Inserting {
 
@@ -13,13 +11,25 @@ public class Inserting {
 	}
 
 	public static String[] insertAlphabetically(String[] orderedArray, String string) {
-	String[] Array = orderedArray;
-	for (int i = 0; i < Array.length; i++) {
-		System.out.println(Array[i]);
+	String[] insert = orderedArray;
+	
+	boolean swap = false;
+	do {
+	for (int i = 0; i < insert.length; i++) {
+		if (insert[i].compareTo(string ) > 0) {
+			swap = true;
+			String temp = insert[i];
+			insert[i] = string;
+			string = temp;
+		}
 	}
+	}while(swap);
+
+for (int i = 0; i < insert.length; i++) {
+	System.out.println(insert);
+}	
 	
-	
-	return orderedArray;
+	return insert;
 	}
 
 }
