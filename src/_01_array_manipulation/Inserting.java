@@ -11,22 +11,37 @@ public class Inserting {
 	}
 
 	public static String[] insertAlphabetically(String[] orderedArray, String string) {
-	String[] insert = orderedArray;
-	boolean swap = false;
-	do {
-	for (int i = 0; i < insert.length-1; i++) {
-		if (insert[i].compareTo(string ) > 0) {
-			swap = true;
-			String temp = insert[i];
+	String[] insert = new String[orderedArray.length + 1] ;
+	
+	
+	for (int i = 0; i < insert.length -1; i++) {
+		for (int j = 0; j < insert.length; j++) {
+			if (orderedArray[i].compareTo(string) < 0) {
 			insert[i] = string;
-			string = temp;
+		}
+		break;
+		} 
+		if(orderedArray[i].compareTo(string) < 0) {
+			insert[i] = orderedArray[i];
 		}
 	}
-	}while(swap);
 
-for (int i = 0; i < insert.length; i++) {
-	System.out.println(insert);
-}	
+	
+	for (int i = 0; i < insert.length -1; i++) {
+	System.out.println(insert[i]);
+	}
+	
+	
+//	for (int i = 0; i < insert.length - 1; i++) {
+//	insert[0] = string;
+//	insert[i + 1] = orderedArray[i];
+//	
+//	
+//	System.out.println(insert[i]);
+//	}
+	
+	
+	
 	
 	return insert;
 	}
