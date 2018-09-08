@@ -30,15 +30,18 @@ public class ArrayList<T> {
 	}
 
 	void addAt(int j, T c) {
+		size = size+ 1 ;
+//		elements[j] = c;
+		for(int i = size; i >= 0; i--) {
+			System.out.println(elements[i] + ", " + i);
+			
+			
+			
 
-		for (int i = size; i > 0; i--) {
-			elements[i] = elements[i + 1];
-			if (i == j) {
-				break;
-			}
-		}
-		elements[j] = c;
-		size += 1;
+			
+			
+		}	
+		
 	}
 
 }
